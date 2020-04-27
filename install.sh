@@ -19,7 +19,7 @@ curl -s $TEKTON | \
      sed "s/@sha.*\"/\"/" |
      sed "s/@sha.*//"> $YAML
 
-#kubectl apply -f $YAML -n $TEKTON_DEMO_NS
+kubectl apply -f $YAML -n $TEKTON_DEMO_NS
 
 curl -s $DASH | \
      sed "s/tekton-pipelines/$TEKTON_DEMO_NS/g" | \
